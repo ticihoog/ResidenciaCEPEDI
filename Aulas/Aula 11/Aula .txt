@@ -1,0 +1,44 @@
+Inciando o assunto Classe e desenvolvimento de programas orientados a objetos. 
+
+## -> ATRIBUTOS
+Atributos de Aluno:
+Nome;
+CPF;
+Nascimento;
+Matricula;
+Curso
+
+## Atributos de professor:
+Nome;
+Nascimento;
+Formação;
+Disciplina;
+
+## -> METODOS
+Métodos de Aluno:
+
+Métodos de Professor:
+
+--------------------------------------------------------------------------------------------
+
+-------------------------    CEMITÉRIO    ------------------------- 
+-> mortos
+nome;
+nascimento;
+data_morte;
+data_enterro;
+dara_remocao.
+
+Métodos mortos:
+cadastro_morto;
+altera_data_enterro;
+listar;
+pesquisar;
+excluir.
+
+-> Mausoleu:
+ID;
+Nome_família;
+Data_ultimo_enterro;
+lote;
+Quantidade de mortos;
