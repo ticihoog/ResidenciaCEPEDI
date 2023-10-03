@@ -3,42 +3,51 @@
 
 using namespace std;
 
-class Animal {
+class Animal
+{
 protected:
     string nome;
     int idade;
 
 public:
-    Animal(string _nome, int _idade) : nome(_nome), idade(_idade) {}
+    Animal(const string &n, int id) : nome(n), idade(id) {}
 
-    virtual void fazerSom() {
-        cout << "O animal faz algum som!" << endl;
+    string getNome() const
+    {
+        return nome;
+    }
+
+    int getIdade() const
+    {
+        return idade;
+    }
+
+    void fazerSom()
+    {
+        cout << "Animal fazendo som de latido." << endl;
     }
 };
 
-class Cachorro : public Animal {
+class Cachorro : public Animal
+{
 public:
-    Cachorro(string _nome, int _idade) : Animal(_nome, _idade) {}
+    Cachorro(const string &n, int id) : Animal(n, id) {}
 
-    void fazerSom() override {
+    void fazerSom()
+    {
         cout << "Au Au!" << endl;
     }
 };
 
-int main() {
-    Animal animal("Bicho", 5);
-    Cachorro cachorro("Rex", 3);
+int main()
+{
+    Animal animal("Cachorro", 5);
+    Cachorro cachorro("Chowchow", 3);
 
-    cout << "Animal:" << endl;
-    cout << "Nome: " << animal.nome << endl;
-    cout << "Idade: " << animal.idade << endl;
+    cout << "Animal: " << animal.getNome() << ", Idade: " << animal.getIdade() << endl;
     animal.fazerSom();
 
-    cout << endl;
-
-    cout << "Cachorro:" << endl;
-    cout << "Nome: " << cachorro.nome << endl;
-    cout << "Idade: " << cachorro.idade << endl;
+    cout << "Cachorro: " << cachorro.getNome() << ", Idade: " << cachorro.getIdade() << endl;
     cachorro.fazerSom();
 
     return 0;
